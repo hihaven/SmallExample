@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- this is xml for link man -->
+<linkman>
+	<man>
+	<name>haven</name>
+	<sex>boy</sex>
+	<age><![CDATA[18]]></age>
+	</man>
+</linkman>

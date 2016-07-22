@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd ">
+
+
+	<bean id="ihello" class="cn.guoxinan.book._07SpringAdvice.IHelloIM"></bean>
+	<bean id="logbefor" class="cn.guoxinan.book._07SpringAdvice.logBefor"></bean>
+	<bean id="helloProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces">
+			<value>cn.guoxinan.book._07SpringAdvice.IHello</value>
+		</property>
+		<property name="target">
+			<ref bean="ihello"></ref>
+		</property>
+		<property name="interceptorNames">
+			<list>
+				<value>logbefor</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

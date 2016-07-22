@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+    http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="log" class="cn.guoxinan.book._09SpringPointcut.LoG">
+	</bean>
+	<bean id="helloadvisor" class="org.springframework.aop.support.NameMatchMethodPointcutAdvisor">
+	<property name="mappedName" value="cn.guoxinan.book._09SpringPointcut.show*"></property>
+	<property name="advice"><ref bean="log"/></property>
+	</bean>
+	<bean id="ma" class="cn.guoxinan.book._09SpringPointcut.NameFromHuman"></bean>
+	<bean id="helloProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+		<property name="proxyInterfaces" value="cn.guoxinan.book._09SpringPointcut.Human"></property>
+		<property name="target"><ref bean="ma"></ref></property>
+		<property name="interceptorNames">
+			<list>
+				<value>log</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>

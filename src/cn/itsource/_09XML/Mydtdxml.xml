@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+	<linkman id="999">
+		<name>haven_1</name>
+		<email>1@1.com</email>
+		<address>chengdu.gaoxing</address>
+	</linkman>
+
+
+	<linkman id="999">
+		<name>haven</name>
+		<email>xxx@163.com</email>
+		<address>sandong</address>
+	</linkman>
+
+	
+	<linkman>
+		<name>zhangsan</name>
+		<email>4@4.com</email>
+		<address>chengdu</address>
+	</linkman>
+<linkman><name>zhangsan</name><email>4@4.com</email><address>chengdu</address></linkman></contacts>
